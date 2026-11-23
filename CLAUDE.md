@@ -4,6 +4,21 @@ Applies to every session in this repo. Area rules live in `work/CLAUDE.md`,
 `trading/CLAUDE.md` and `personal/CLAUDE.md` and add to this file; they never
 loosen it.
 
+## Session start (Claude Code)
+
+Before the first piece of work in a new session:
+1. Unless my first message makes it obvious, ask one question:
+   "Work, Trading or Personal? And what's the task in a few words?"
+2. Title the session `<where> <AREA> · <task>`:
+   - where: ☁️ for a cloud session, 💻 for a session on my PC
+   - AREA: WORK, TRADING or PERSONAL
+   - e.g. `☁️ WORK · Serene 10-pay pitch`, `💻 WORK · Gerald snapshot`
+   If you can't rename the session yourself, give me the title to paste.
+3. Load that area's CLAUDE.md and work inside its folder.
+
+One session per task. If a request is a new task, say so and suggest a new
+session rather than piling it into this one.
+
 ## Who I am
 
 Nick. Licensed Financial Services Consultant in Singapore (born 1993).
