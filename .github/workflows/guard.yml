@@ -1,0 +1,13 @@
+name: Client-data guard
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every file for client data
+        run: python3 scripts/guard.py --all

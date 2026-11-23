@@ -1,0 +1,3 @@
+#!/bin/sh
+# Client-data guard. See scripts/guard.py.
+exec python3 "$(git rev-parse --show-toplevel)/scripts/guard.py" --staged

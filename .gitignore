@@ -1,0 +1,26 @@
+# Client documents never belong in this repo (the guard also blocks them)
+*.pdf
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.docx
+*.doc
+*.pptx
+*.ppt
+
+# Local-only working folders
+clients/
+local/
+output/
+
+# Secrets
+.env
+*.key
+
+# Python and OS clutter
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db
