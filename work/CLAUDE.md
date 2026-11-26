@@ -116,6 +116,22 @@ A4 fit check before calling a page done.
 - Store client working inputs (premiums, fund picks) in Drive or on my PC,
   not in the repo.
 
+## Work Desk and its pages
+
+| Page | URL | What it holds |
+|---|---|---|
+| Work Desk | https://claude.ai/artifact/HT749EePXdqUcRAwpUHU1p | To-dos, clients in flight (initials only), task launchers, fund-data status, content links |
+| Production 2026 | https://claude.ai/artifact/DWWT2gAEAQAisfsxqv7WyG | Live read of the Pipes tab of "Pipes and Targets": to-date RC, commission, NAC, remuneration, distance to MDRT/COT/TOT |
+| Template Hub | https://claude.ai/artifact/2DRQQ6nb5hHaUqjzzbJB8X | Template launcher; `#<template-id>` in the link pre-picks one |
+
+Keep the Desk current from sessions (ArtifactData on the Work Desk URL):
+- After saving a fund file to Drive Fund Data, set `status/fund` to
+  `{navDate, fetchedOn (SGT date), file}`.
+- When I ask to add a to-do: `todos` collection, `{text, done: false, created}`.
+- When client work starts or changes stage: `clients` collection,
+  `{initials, work, stage, next, due, created}`. Initials only, never full names.
+- New weekly update or ad hoc note: `content` collection, `{title, url, date}`.
+
 ## Out of scope for now
 
 Content marketing (LinkedIn / Instagram) and claims support. The original
