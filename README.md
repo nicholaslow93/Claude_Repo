@@ -9,12 +9,13 @@ Templates only. No client data lives here.
 CLAUDE.md                 Global rules, loaded in every session
 work/
   CLAUDE.md               Advisory practice rules
-  skills/                 Repo copies of advisory skills
-  templates/              One-pager layouts and specs (fictional examples only)
-  scripts/                Generators and checks (pitch builder, A4 fit check)
+  skills/                 Advisory skills (SKILL.md per skill)
+  engine/                 One-pager builders, fund-data processing, A4 check,
+                          blank specs, fictional reference builds
   reference/              Archived material
 scripts/
   guard.py                Client-data guard
+  package-skills.py       Zip skills + engine for upload as account skills
 .githooks/                Pre-commit hook
 .github/workflows/        The same guard, run on GitHub for every push
 .claude/settings.json     Turns the hook on at the start of each session
@@ -36,7 +37,7 @@ Every commit is checked. It is blocked if a file:
 - contains a known client name
 
 The client-name list is never in the repo. The master copy is the Google Doc
-"Claude Guard - Client Names" (Drive, `Catalyst Docs`): one name per line, in
+"Claude Guard - Client Names" (Drive, `AI Assisted Documents/Work AI Files`): one name per line, in
 every form it appears (full name, first name + initial, initials). Each
 session copies it to `~/.config/claude-guard/client-names.txt` (or the path in
 `$GUARD_NAMES_FILE`). Without that file the guard still runs the NRIC and

@@ -1,0 +1,86 @@
+{
+ "_how": "Fill every <...>. No figure may be typed except premium/bonus/cashback/weights. Fund data comes from fund_file. Build: python3 build_pitch.py spec.json Main.dc.html",
+ "mode": "npay | topup",
+ "client": "<display name>",
+ "plan": "Manulife InvestReady III",
+ "date": "<YYYY-MM-DD = fund fetch day>",
+ "fund_file": "<data/funds_YYYY-MM-DD.json>",
+ "premium": "<npay: annual premium S$ | topup: top-up S$>",
+ "years": "<npay only: 2-20>",
+ "bonus_pct": "<npay only: % of Y1 premium; 0 only if no bonus>",
+ "cashback_pct": "<npay only: % of Y1 premium; 0 if none>",
+ "funds": [
+  {
+   "code": "ASGI",
+   "weight": 30,
+   "role": "Core global income"
+  },
+  {
+   "code": "CABF",
+   "weight": 20,
+   "role": "Balanced stability"
+  },
+  {
+   "code": "NAJD",
+   "weight": 20,
+   "role": "Japan dividends"
+  },
+  {
+   "code": "NSAD",
+   "weight": 20,
+   "role": "SG banks, dividends"
+  },
+  {
+   "code": "MGSO",
+   "weight": 10,
+   "role": "Semicon growth"
+  }
+ ],
+ "thesis": [
+  {
+   "lead": "<bold lead>",
+   "text": "<1-2 sentences; external figures only, each backed by its source>",
+   "sources": [
+    {
+     "name": "<source, e.g. FactSet Earnings Insight>",
+     "date": "<publication date YYYY-MM-DD, or YYYY-MM>",
+     "checked": "<YYYY-MM-DD you confirmed it's the latest release>"
+    }
+   ]
+  },
+  {
+   "lead": "<bold lead>",
+   "text": "<1-2 sentences; external figures only, each backed by its source>",
+   "sources": [
+    {
+     "name": "<source, e.g. FactSet Earnings Insight>",
+     "date": "<publication date YYYY-MM-DD, or YYYY-MM>",
+     "checked": "<YYYY-MM-DD you confirmed it's the latest release>"
+    }
+   ]
+  },
+  {
+   "lead": "<bold lead>",
+   "text": "<1-2 sentences; external figures only, each backed by its source>",
+   "sources": [
+    {
+     "name": "<source, e.g. FactSet Earnings Insight>",
+     "date": "<publication date YYYY-MM-DD, or YYYY-MM>",
+     "checked": "<YYYY-MM-DD you confirmed it's the latest release>"
+    }
+   ]
+  },
+  {
+   "lead": "<bold lead>",
+   "text": "<1-2 sentences; external figures only, each backed by its source>",
+   "sources": [
+    {
+     "name": "<source, e.g. FactSet Earnings Insight>",
+     "date": "<publication date YYYY-MM-DD, or YYYY-MM>",
+     "checked": "<YYYY-MM-DD you confirmed it's the latest release>"
+    }
+   ]
+  }
+ ],
+ "volatile_note": "<optional, e.g. MGSO is concentrated in semiconductors and can be highly volatile.>"
+}

@@ -1,0 +1,164 @@
+{
+ "client": "Sample Client",
+ "report_date": "2026-09-14",
+ "_fixture_note": "Fictional test fixture. Amounts scaled and dates shifted from an anonymised build; not any client's figures.",
+ "capital_invested": 157480,
+ "partial_withdrawals": 304,
+ "report_totals": {
+  "value": 196132,
+  "pnl": 16755
+ },
+ "policies": [
+  {
+   "label": "Policy 1",
+   "start": "Feb 2024",
+   "paid_out": 3015,
+   "reinvested": 304
+  },
+  {
+   "label": "Policy 2",
+   "start": "Sep 2024",
+   "paid_out": 290,
+   "reinvested": 1034
+  },
+  {
+   "label": "Policy 3",
+   "start": "Jan 2025",
+   "paid_out": 0,
+   "reinvested": 129
+  },
+  {
+   "label": "Policy 4",
+   "start": "Oct 2025",
+   "paid_out": 0,
+   "reinvested": 348
+  },
+  {
+   "label": "Policy 5",
+   "start": "Mar 2026",
+   "paid_out": 0,
+   "reinvested": 58
+  }
+ ],
+ "funds": [
+  {
+   "code": "JPAE",
+   "name": "JPMorgan America Equity",
+   "value": 55381,
+   "pnl": 6945,
+   "pnl_pct": 14.3
+  },
+  {
+   "code": "FGTF",
+   "name": "Fidelity Global Technology",
+   "value": 22525,
+   "pnl": 5165,
+   "pnl_pct": 29.8
+  },
+  {
+   "code": "CGNP",
+   "name": "Capital Group New Perspective",
+   "value": 37264,
+   "pnl": 4529,
+   "pnl_pct": 13.8
+  },
+  {
+   "code": "NAJD",
+   "name": "Amova Japan Dividend Equity",
+   "value": 4272,
+   "pnl": 1052,
+   "pnl_pct": 32.7
+  },
+  {
+   "code": "BWTF",
+   "name": "BGF World Technology",
+   "value": 3312,
+   "pnl": 887,
+   "pnl_pct": 36.6
+  },
+  {
+   "code": "TGFP",
+   "name": "T. Rowe Global Focused Growth",
+   "value": 2889,
+   "pnl": 463,
+   "pnl_pct": 19.1
+  },
+  {
+   "code": "ACAS",
+   "name": "Allianz China A-Shares",
+   "value": 1140,
+   "pnl": 273,
+   "pnl_pct": 31.5
+  },
+  {
+   "code": "NSAD",
+   "name": "Amova Singapore Dividend Equity",
+   "value": 1109,
+   "pnl": 242,
+   "pnl_pct": 28.0
+  },
+  {
+   "code": "MGMD",
+   "name": "Manulife Global Multi-Asset Income",
+   "value": 26299,
+   "pnl": 239,
+   "pnl_pct": 0.9
+  },
+  {
+   "code": "CABF",
+   "name": "Capital Group American Balanced",
+   "value": 3740,
+   "pnl": 102,
+   "pnl_pct": 2.8
+  },
+  {
+   "code": "MSOI",
+   "name": "Manulife Singapore Opportunities Income",
+   "value": 2621,
+   "pnl": 95,
+   "pnl_pct": 3.8
+  },
+  {
+   "code": "MGSO",
+   "name": "MGF Global Semiconductor Opportunities",
+   "value": 1540,
+   "pnl": 24,
+   "pnl_pct": 1.6
+  },
+  {
+   "code": "BWGF",
+   "name": "BGF World Gold",
+   "value": 1185,
+   "pnl": -27,
+   "pnl_pct": -2.3
+  },
+  {
+   "code": "PGIF",
+   "name": "PIMCO GIS Income (E class)",
+   "value": 1518,
+   "pnl": -50,
+   "pnl_pct": -3.2
+  },
+  {
+   "code": "CNES",
+   "name": "Capital Group New Economy",
+   "value": 2425,
+   "pnl": -102,
+   "pnl_pct": -4.0
+  },
+  {
+   "code": "PGIA",
+   "name": "PIMCO GIS Income (Admin class)",
+   "value": 2282,
+   "pnl": -144,
+   "pnl_pct": -5.9
+  },
+  {
+   "code": "MARH",
+   "name": "Manulife Asia Pac REIT",
+   "value": 26630,
+   "pnl": -2938,
+   "pnl_pct": -9.4
+  }
+ ]
+}

@@ -16,7 +16,7 @@ Before the first piece of work in a new session:
    If you can't rename the session yourself, give me the title to paste.
 3. Load that area's CLAUDE.md and work inside its folder.
 4. Before the first commit, if `~/.config/claude-guard/client-names.txt` is
-   missing, read the Drive doc "Claude Guard - Client Names" (Catalyst Docs)
+   missing, read the Drive doc "Claude Guard - Client Names" (AI Assisted Documents / Work AI Files)
    and write its names there, one per line. Never copy it into the repo.
 
 One session per task. If a request is a new task, say so and suggest a new
@@ -80,7 +80,7 @@ Anything a client will see (pitches, snapshots, proposals, messages, updates):
 
 | Tier | Examples | Allowed | Never |
 |---|---|---|---|
-| Identifying | NRIC, policy numbers, statements, fact-finds | My PC (AI Documents) | GitHub, Drive, artifacts |
+| Identifying | NRIC, policy numbers, statements, fact-finds | My PC (AI Documents, which syncs to iCloud; accepted as local) | GitHub, Drive, artifacts |
 | Client working data | Names or initials, holdings, premiums | My PC, Google Drive | GitHub |
 | Non-client | Skills, templates, scripts, fund data, research, content | GitHub | — |
 
@@ -99,6 +99,7 @@ Anything a client will see (pitches, snapshots, proposals, messages, updates):
 | GitHub (this repo) | Master copy of skills, templates, scripts, area rules |
 | Account skills | Published copies of the repo skills, for Cowork and chat |
 | Google Drive | Client working sheets (`Catalyst Docs/Client Portfolios`), personal finance sheets |
+| Google Drive, `AI Assisted Documents/Work AI Files` | Guard name list, Claude exports, other AI working files for work |
 | My PC, AI Documents | Statements, identifying documents, finished client PDFs |
 | Artifacts | Desks, trackers, previews of client output |
 

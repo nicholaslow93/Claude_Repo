@@ -1,0 +1,82 @@
+{
+ "client": "Sample Client",
+ "plan": "Manulife InvestReady III",
+ "date": "2026-11-20",
+ "fund_file": "data/funds_2026-11-19.json",
+ "funds": [
+  {
+   "code": "ASGI",
+   "weight": 30,
+   "role": "Core global income"
+  },
+  {
+   "code": "CABF",
+   "weight": 20,
+   "role": "Balanced stability"
+  },
+  {
+   "code": "NAJD",
+   "weight": 20,
+   "role": "Japan dividends"
+  },
+  {
+   "code": "NSAD",
+   "weight": 20,
+   "role": "SG banks, dividends"
+  },
+  {
+   "code": "MGSO",
+   "weight": 10,
+   "role": "Semicon growth"
+  }
+ ],
+ "thesis": [
+  {
+   "lead": "Earnings are strong.",
+   "text": "S&P 500 Q3 2026 earnings grew over 25% y/y, a third straight quarter; 84% beat estimates.",
+   "sources": [
+    {
+     "name": "FactSet Earnings Insight",
+     "date": "2026-11-06",
+     "checked": "2026-11-19"
+    }
+   ]
+  },
+  {
+   "lead": "Morgan Stanley is maximum overweight equities.",
+   "text": "Upgraded 16 Nov on an intact AI investment cycle and the cheapest valuations since 2023; also raised Japan to overweight.",
+   "sources": [
+    {
+     "name": "Morgan Stanley, as reported",
+     "date": "2026-11-16",
+     "checked": "2026-11-19"
+    }
+   ]
+  },
+  {
+   "lead": "Rates higher for longer suits this mix.",
+   "text": "Delayed cuts keep lending margins healthy for DBS, OCBC and UOB, about a quarter of the Singapore fund.",
+   "sources": [
+    {
+     "name": "Morgan Stanley, as reported",
+     "date": "2026-11-16",
+     "checked": "2026-11-19"
+    }
+   ]
+  },
+  {
+   "lead": "The dip is the entry, not a warning.",
+   "text": "The sell-off came from worries about AI spending, not falling earnings.",
+   "sources": [
+    {
+     "name": "FactSet Earnings Insight",
+     "date": "2026-11-06",
+     "checked": "2026-11-19"
+    }
+   ]
+  }
+ ],
+ "volatile_note": "MGSO is concentrated in semiconductors and can be highly volatile.",
+ "mode": "topup",
+ "premium": 200000
+}
