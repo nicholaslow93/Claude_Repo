@@ -116,6 +116,24 @@ A4 fit check before calling a page done.
 - Store client working inputs (premiums, fund picks) in Drive or on my PC,
   not in the repo.
 
+## Work design language: "Signal" (internal work pages only)
+
+Applies to work tools I use myself: the Desk, Hub, trackers. Client-facing
+one-pagers keep the navy/gold house style above.
+
+- Masthead: cobalt band `#1440a8` (dark mode `#102f7d`) with a 22px white
+  grid at 7-8% opacity; eyebrow "Perpetual Accredited Investor Grind" in
+  gold `#ffd77a`, IBM Plex Mono caps; title in Space Grotesk 700.
+- Body: pale blue `#eef3fc` with the same 22px grid in blue at 7% opacity
+  (dark: `#0d1424`); white cards `#ffffff`, 1px `#d8e0ee` border, 12-14px radius.
+- Accent: blue `#1f56d6` (dark `#6f9bff`), soft `#e1e9fb`; gold `#c99a2e`
+  for the next milestone; ok `#15795e`, bad `#b3401a`.
+- Type: Space Grotesk for headings and big numbers, IBM Plex Sans for text,
+  IBM Plex Mono for labels, dates and codes.
+- Key figures (commission, remuneration) sit in a bordered blue-soft box,
+  about 15% larger than the rest.
+- Buttons are pill-shaped, blue. Light and dark themes both supported.
+
 ## Work Desk and its pages
 
 | Page | URL | What it holds |
