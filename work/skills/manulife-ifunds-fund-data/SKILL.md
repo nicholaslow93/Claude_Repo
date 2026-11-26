@@ -1,6 +1,6 @@
 ---
 name: "manulife-ifunds-fund-data"
-description: "Pull Manulife ILP fund data (NAV, 3-month high, distributions, yield, ISIN, plan availability) from the public iFUNDS funds library, or find a new fund by name or theme. The single source for every fund figure in Nick's pitches and switch proposals."
+description: "Pull Manulife ILP fund data (NAV, 3-month high, distributions, yield, ISIN, plan availability) from the public iFUNDS funds library, or find a new fund by name or theme."
 ---
 
 # Manulife iFUNDS fund data
