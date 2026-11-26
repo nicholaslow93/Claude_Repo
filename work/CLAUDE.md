@@ -92,16 +92,21 @@ A4 fit check before calling a page done.
 
 ## Skills and templates
 
-| Workflow | Skill | Status |
-|---|---|---|
-| ILP fund data | manulife-ifunds-fund-data | Live (account skill) |
-| Top-up and N-pay pitches | ilp-topup-pitch | Live (account skill), rebuilding in repo |
-| Portfolio snapshot, fund switch | client-portfolio-snapshot | Live (account skill), rebuilding in repo |
-| Weekly update | weekly-update | Planned |
-| Ad hoc note | ad-hoc-note | Planned |
+| Workflow | Skill | Runs | Status |
+|---|---|---|---|
+| ILP fund data | manulife-ifunds-fund-data | Fetch on PC; file shared via Drive `Work AI Files/Fund Data` | In repo |
+| Top-up and N-pay pitches | ilp-topup-pitch | Cloud or PC | In repo, references pass |
+| Portfolio snapshot, fund switch | client-portfolio-snapshot | PC only (needs the statement) | In repo, references pass |
+| Weekly update | weekly-update | Cloud | Planned |
+| Ad hoc note | ad-hoc-note | Cloud | Planned |
 
-Repo copies live in `work/skills/`. Test data and examples use fictional
-clients only.
+- Skills: `work/skills/<name>/SKILL.md`. Engine (builders, fund-data
+  processing, A4 check, blank specs, fictional references): `work/engine/`.
+- Build client pages in a working folder outside the repo (e.g. `runs/`,
+  which is git-ignored). Client specs and outputs are never committed.
+- After changing a skill or the engine, run
+  `python3 scripts/package-skills.py` and upload the zips from `dist/` as
+  account skills so Cowork and chat stay in step.
 
 ## Delivering client output
 

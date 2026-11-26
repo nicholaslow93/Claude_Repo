@@ -9,12 +9,13 @@ Templates only. No client data lives here.
 CLAUDE.md                 Global rules, loaded in every session
 work/
   CLAUDE.md               Advisory practice rules
-  skills/                 Repo copies of advisory skills
-  templates/              One-pager layouts and specs (fictional examples only)
-  scripts/                Generators and checks (pitch builder, A4 fit check)
+  skills/                 Advisory skills (SKILL.md per skill)
+  engine/                 One-pager builders, fund-data processing, A4 check,
+                          blank specs, fictional reference builds
   reference/              Archived material
 scripts/
   guard.py                Client-data guard
+  package-skills.py       Zip skills + engine for upload as account skills
 .githooks/                Pre-commit hook
 .github/workflows/        The same guard, run on GitHub for every push
 .claude/settings.json     Turns the hook on at the start of each session
