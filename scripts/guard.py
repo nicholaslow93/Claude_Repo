@@ -9,7 +9,7 @@ Blocks a commit (or fails CI) if any file:
 The client-name list never lives in this repo. It is read from a file
 outside it: $GUARD_NAMES_FILE, or ~/.config/claude-guard/client-names.txt.
 The master list is the Google Doc "Claude Guard - Client Names" in Drive
-(Catalyst Docs). If the file is missing, checks 1 and 2 still run and the
+(AI Assisted Documents / Work AI Files). If the file is missing, checks 1 and 2 still run and the
 guard prints a warning that the name check was skipped.
 
 Usage:

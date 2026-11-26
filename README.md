@@ -36,7 +36,7 @@ Every commit is checked. It is blocked if a file:
 - contains a known client name
 
 The client-name list is never in the repo. The master copy is the Google Doc
-"Claude Guard - Client Names" (Drive, `Catalyst Docs`): one name per line, in
+"Claude Guard - Client Names" (Drive, `AI Assisted Documents/Work AI Files`): one name per line, in
 every form it appears (full name, first name + initial, initials). Each
 session copies it to `~/.config/claude-guard/client-names.txt` (or the path in
 `$GUARD_NAMES_FILE`). Without that file the guard still runs the NRIC and
