@@ -1,0 +1,125 @@
+{
+ "client": "Sample Client",
+ "plan": "Manulife InvestReady III",
+ "date": "2026-11-20",
+ "fund_file": "data/funds_2026-11-19.json",
+ "_fixture_note": "Fictional test fixture. Amounts scaled from an anonymised build; not any client's figures.",
+ "report": {
+  "date": "2026-11-18",
+  "start_date": "2025-10-03",
+  "paid_in": 117150,
+  "dividends_paid_out": 8373,
+  "dividends_reinvested": 0,
+  "rpq_cka_expiry": "2026-12-04",
+  "holdings": [
+   {
+    "code": "CABF",
+    "role": "Balanced core",
+    "value": 32974,
+    "cost": 32680,
+    "pnl": 294
+   },
+   {
+    "code": "MGMD",
+    "role": "Income engine",
+    "value": 43572,
+    "cost": 44325,
+    "pnl": -753
+   },
+   {
+    "code": "PGIA",
+    "role": "Global bonds",
+    "value": 24162,
+    "cost": 25759,
+    "pnl": -1597
+   },
+   {
+    "code": "MARH",
+    "role": "APAC REITs",
+    "value": 23603,
+    "cost": 25655,
+    "pnl": -2052
+   }
+  ]
+ },
+ "target": [
+  {
+   "code": "CABF",
+   "weight": 30,
+   "role": "Balanced core",
+   "holds_bonds": true
+  },
+  {
+   "code": "MGMD",
+   "weight": 15,
+   "role": "Income engine",
+   "holds_bonds": true
+  },
+  {
+   "code": "NSAD",
+   "weight": 25,
+   "role": "SG dividends",
+   "holds_bonds": false
+  },
+  {
+   "code": "ASGI",
+   "weight": 15,
+   "role": "Global income",
+   "holds_bonds": false
+  },
+  {
+   "code": "NAJD",
+   "weight": 15,
+   "role": "Japan dividends",
+   "holds_bonds": false
+  }
+ ],
+ "idea": "Your plan's total value is holding up, but PIMCO Income and the REIT fund have dragged on the portfolio as rates stay higher for longer. We propose rebalancing, with no new money, to take advantage of the current volatility and our bullish view on equities.",
+ "tile_lead": "Holding up well.",
+ "tile_note": "The welcome bonus and a spread of four funds absorbed a tough year for bonds and REITs.",
+ "thesis": [
+  {
+   "lead": "Growth is picking up.",
+   "text": "The US economy grew at a 3.4% annualised pace in Q3 2026, its fastest in a year. The IMF sees global growth rising from 3.1% this year to 3.4% in 2027.",
+   "sources": [
+    {
+     "name": "US BEA GDP advance estimate",
+     "date": "2026-10-29",
+     "checked": "2026-11-20"
+    },
+    {
+     "name": "IMF World Economic Outlook",
+     "date": "2026-10",
+     "checked": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "lead": "Earnings are booming.",
+   "text": "S&P 500 earnings grew 31.4% year on year in Q3 2026, the third straight quarter above 25%, and 84% of companies beat estimates.",
+   "sources": [
+    {
+     "name": "FactSet Earnings Insight",
+     "date": "2026-11-06",
+     "checked": "2026-11-19"
+    }
+   ]
+  },
+  {
+   "lead": "Valuations are reasonable.",
+   "text": "The S&P 500 trades at 17.7 times next year's earnings, below its 5-year (19.8) and 10-year (19.1) averages. Morgan Stanley moved to its most bullish rating on global stocks on 16 Nov.",
+   "sources": [
+    {
+     "name": "FactSet Earnings Insight",
+     "date": "2026-11-06",
+     "checked": "2026-11-19"
+    },
+    {
+     "name": "Morgan Stanley, as reported",
+     "date": "2026-11-16",
+     "checked": "2026-11-19"
+    }
+   ]
+  }
+ ]
+}

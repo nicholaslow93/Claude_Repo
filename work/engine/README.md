@@ -91,4 +91,4 @@ A4 794×1123, IBM Plex Sans/Serif, navy #1a1f2b, green #14584a positives, terrac
 - Python Playwright: `pip install playwright` (the browser is already installed; `render_check.py` finds it, or set `CHROME_PATH`).
 - Fonts: `npm pack @ibm/plex-sans @ibm/plex-serif`, untar each, and point `PLEX_DIR` at the folder.
 - Fund data can't be fetched from the cloud (Manulife blocks data-centre IPs). Fetch on the PC with `ifunds_fetch.js` in the built-in browser, then bring the `funds_<date>.json` file across.
-- `ref/ref-snapshot.json` and `ref/ref-switch.json` are held back until their figures are fictionalised.
+- All `ref/` fixtures are fictional ("Sample Client"); snapshot and switch amounts were scaled and dates shifted.
