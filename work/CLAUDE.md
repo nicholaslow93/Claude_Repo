@@ -133,6 +133,8 @@ one-pagers keep the navy/gold house style above.
 - Key figures (commission, remuneration) sit in a bordered blue-soft box,
   about 15% larger than the rest.
 - Buttons are pill-shaped, blue.
+- Body text 15.5px; captions and labels no smaller than 11.5px (mono caps)
+  or 13px (text), muted grey `#4e5973`, so text reads over the grid.
 - Light-only: the page stays light (pale blue grid, white cards) even when
   the viewer is in dark mode.
 

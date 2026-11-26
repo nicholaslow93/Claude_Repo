@@ -42,7 +42,11 @@ fund or on a new day. The builds refuse a fund file from another day.
    `python3 fund_data.py raw_<date>.json` → `funds_<latest NAV date>.json`.
 5. Upload the `funds_…json` file to Drive `Work AI Files / Fund Data` (no
    conversion) so cloud sessions can build from it.
-6. If the browser can't be reached, say so and stop. Don't fall back to other
+6. Tell the Work Desk (https://claude.ai/artifact/HT749EePXdqUcRAwpUHU1p):
+   with ArtifactData, set `status/fund` to
+   `{navDate: <latest NAV date>, fetchedOn: <today, SGT>, file: <file name>}`.
+   Its pitch tiles turn green for the rest of the day.
+7. If the browser can't be reached, say so and stop. Don't fall back to other
    sites.
 
 APIs, for reference (both need the header `locale: en_SG`):
