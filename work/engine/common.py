@@ -78,6 +78,10 @@ def day_mon(dt):
 def load_fund_file(path, prepared, codes):
     ff = json.load(open(path))
     fetched = datetime.fromisoformat(ff["fetched_at"].replace("Z", "+00:00")) + timedelta(hours=8)  # SGT
+    today_sgt = (datetime.utcnow() + timedelta(hours=8)).date()
+    if prepared != today_sgt and not _ref["on"]:
+        fail(f"proposal is dated {prepared} but today is {today_sgt} (SGT). Client pages are built on the day, "
+             f"with a fund file fetched that day; backdating would let stale prices through.")
     age = (prepared - fetched.date()).days
     if (age > FUND_FILE_MAX_AGE or age < 0) and not _ref["on"]:
         fail(f"fund file was fetched {fetched.date()} but the proposal is dated {prepared}. Re-run the iFUNDS fetch "

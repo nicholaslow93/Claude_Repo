@@ -80,7 +80,7 @@ Anything a client will see (pitches, snapshots, proposals, messages, updates):
 
 | Tier | Examples | Allowed | Never |
 |---|---|---|---|
-| Identifying | NRIC, policy numbers, statements, fact-finds | My PC (AI Documents) | GitHub, Drive, artifacts |
+| Identifying | NRIC, policy numbers, statements, fact-finds | My PC (AI Documents, which syncs to iCloud; accepted as local) | GitHub, Drive, artifacts |
 | Client working data | Names or initials, holdings, premiums | My PC, Google Drive | GitHub |
 | Non-client | Skills, templates, scripts, fund data, research, content | GitHub | — |
 
