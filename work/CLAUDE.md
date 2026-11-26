@@ -166,6 +166,11 @@ Manulife blocks cloud IPs, so the fetch runs on my PC (ChadMachine) in the
   `💻 WORK · Fund data fetch`, with a prompt to run the
   manulife-ifunds-fund-data skill for the codes in `settings/funds`, upload
   the file to Drive Fund Data and set `status/fund` on the Desk.
+  Start it with `permission_mode: "auto"`, then check its status a few
+  minutes later: if it is waiting on a permission prompt, tell me at once.
+- The fund list is the Model Portfolio focus list
+  (https://claude.ai/artifact/4uLgYm6BzmuUCquYQVYHry) plus my extras, kept in
+  `settings/funds` by ISIN. Re-check the page for changes when I ask.
 - From the Desk: "Fetch on my PC" sends a comment to Claude ("Fetch fund
   data on my PC: …"). The session watching the Desk does the step above,
   replies in that thread when the PC session is started, and resolves it
