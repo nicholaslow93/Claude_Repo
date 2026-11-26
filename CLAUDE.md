@@ -15,6 +15,9 @@ Before the first piece of work in a new session:
    - e.g. `☁️ WORK · Serene 10-pay pitch`, `💻 WORK · Gerald snapshot`
    If you can't rename the session yourself, give me the title to paste.
 3. Load that area's CLAUDE.md and work inside its folder.
+4. Before the first commit, if `~/.config/claude-guard/client-names.txt` is
+   missing, read the Drive doc "Claude Guard - Client Names" (Catalyst Docs)
+   and write its names there, one per line. Never copy it into the repo.
 
 One session per task. If a request is a new task, say so and suggest a new
 session rather than piling it into this one.
@@ -84,8 +87,10 @@ Anything a client will see (pitches, snapshots, proposals, messages, updates):
 - Nothing committed to this repo may relate to a specific client. Examples and
   test specs use fictional clients ("Client A", "Jane Tan").
 - Artifacts showing client work use initials in the title, never full names.
-- A pre-commit guard blocks NRIC patterns and known client names. Never bypass
-  it. If it fires, fix the file.
+- A pre-commit guard blocks NRIC patterns, document files and known client
+  names. Never bypass it. If it fires, fix the file.
+- New client? Add their name forms to the Drive doc "Claude Guard - Client
+  Names". That doc, not the repo, is the list.
 
 ## Where things live
 

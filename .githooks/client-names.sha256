@@ -1,2 +1,0 @@
-# Salted SHA-256 hashes of client names, one per line. See scripts/guard.py.
-# Add names with: python3 scripts/add-client-name.py "Name"

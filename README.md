@@ -15,8 +15,7 @@ work/
   reference/              Archived material
 scripts/
   guard.py                Client-data guard
-  add-client-name.py      Add a name to the guard's hashed blocklist
-.githooks/                Pre-commit hook and the hashed name list
+.githooks/                Pre-commit hook
 .github/workflows/        The same guard, run on GitHub for every push
 .claude/settings.json     Turns the hook on at the start of each session
 ```
@@ -34,13 +33,17 @@ scripts/
 Every commit is checked. It is blocked if a file:
 - is a PDF, Excel, Word, PowerPoint or CSV file
 - contains something shaped like an NRIC/FIN number
-- contains a known client name (stored only as salted hashes)
+- contains a known client name
 
-The same check runs on GitHub, so web uploads are covered too. To add a client:
+The client-name list is never in the repo. The master copy is the Google Doc
+"Claude Guard - Client Names" (Drive, `Catalyst Docs`): one name per line, in
+every form it appears (full name, first name + initial, initials). Each
+session copies it to `~/.config/claude-guard/client-names.txt` (or the path in
+`$GUARD_NAMES_FILE`). Without that file the guard still runs the NRIC and
+file-type checks and warns that the name check was skipped.
 
-```
-python3 scripts/add-client-name.py "Full Name" "First L" "INITIALS"
-```
+The GitHub check runs without the name list, so it covers NRICs and file
+types only.
 
-Then commit `.githooks/client-names.sha256`. On a fresh clone outside Claude
-Code, switch the hook on once with `git config core.hooksPath .githooks`.
+On a fresh clone outside Claude Code, switch the hook on once with
+`git config core.hooksPath .githooks`.
