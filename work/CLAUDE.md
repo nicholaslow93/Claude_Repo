@@ -170,11 +170,14 @@ Manulife blocks cloud IPs, so the fetch runs on my PC (ChadMachine) in the
   minutes later: if it is waiting on a permission prompt, tell me at once.
 - The fund list is the Model Portfolio focus list
   (https://claude.ai/artifact/4uLgYm6BzmuUCquYQVYHry) plus my extras, kept in
-  `settings/funds` by ISIN. Re-check the page for changes when I ask.
-- From the Desk: "Fetch on my PC" sends a comment to Claude ("Fetch fund
-  data on my PC: …"). The session watching the Desk does the step above,
-  replies in that thread when the PC session is started, and resolves it
-  once `status/fund` shows today's date.
+  `settings/funds` by ISIN. Re-checked on every Desk refresh, or when I ask.
+- From the Desk: "Refresh fund data" sends one comment to Claude ("Refresh
+  fund data: sweep the focus list…"). The session watching the Desk then, in
+  one go: re-reads the focus list page and updates `settings/funds` if it
+  changed (keep `extras`), starts the PC fetch above for the full list,
+  replies in that thread with what changed and that the fetch started, checks
+  the PC session until it finishes, then resolves the thread. Nick presses
+  once; everything else is on Claude.
 - Fallback: "Copy prompt instead" on the Desk, pasted into Cowork on the PC.
 
 ## Out of scope for now
