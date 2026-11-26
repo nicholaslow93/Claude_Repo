@@ -153,6 +153,24 @@ Keep the Desk current from sessions (ArtifactData on the Work Desk URL):
 - When client work starts or changes stage: `clients` collection,
   `{initials, work, stage, next, due, created}`. Initials only, never full names.
 - New weekly update or ad hoc note: `content` collection, `{title, url, date}`.
+- The fund codes to fetch live in `settings/funds` (`{codes: [...]}`). Change the
+  list there; the Desk and the fetch use it.
+
+### Fetching fund data on the PC
+
+Manulife blocks cloud IPs, so the fetch runs on my PC (ChadMachine) in the
+`Claude Bridge` folder, whose Claude app session has the built-in browser.
+- From a cloud session that I've approved for my trusted devices: call
+  `create_session` with the bridge environment whose name contains
+  "Claude Bridge" (`list_environments`, kind `bridge`), titled
+  `💻 WORK · Fund data fetch`, with a prompt to run the
+  manulife-ifunds-fund-data skill for the codes in `settings/funds`, upload
+  the file to Drive Fund Data and set `status/fund` on the Desk.
+- From the Desk: "Fetch on my PC" sends a comment to Claude ("Fetch fund
+  data on my PC: …"). The session watching the Desk does the step above,
+  replies in that thread when the PC session is started, and resolves it
+  once `status/fund` shows today's date.
+- Fallback: "Copy prompt instead" on the Desk, pasted into Cowork on the PC.
 
 ## Out of scope for now
 
