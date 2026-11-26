@@ -1,0 +1,29 @@
+{
+ "_how": "Report figures only. report_totals are the report's own page-1 totals; the build stops if the fund lines don't add up to them. Build: python3 build_snapshot.py spec.json Main.dc.html",
+ "client": "<display name>",
+ "report_date": "<YYYY-MM-DD>",
+ "capital_invested": "<total investment cost S$>",
+ "partial_withdrawals": "<S$, 0 if none>",
+ "report_totals": {
+  "value": "<S$>",
+  "pnl": "<S$>"
+ },
+ "policies": [
+  {
+   "label": "Policy 1",
+   "start": "<Mon YYYY>",
+   "paid_out": "<S$>",
+   "reinvested": "<S$>"
+  }
+ ],
+ "funds": [
+  {
+   "code": "<code>",
+   "name": "<name>",
+   "value": "<S$>",
+   "pnl": "<S$ incl. dividends>",
+   "pnl_pct": "<report's % if shown, else omit>"
+  }
+ ],
+ "note": "<optional comment, no figures>"
+}

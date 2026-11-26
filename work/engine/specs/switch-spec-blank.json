@@ -1,0 +1,95 @@
+{
+ "_how": "Report figures only, read off the Customer Investment Report. Editorial fields (idea, tile_lead, tile_note) may not contain S$, % or numbers. Build: python3 build_switch.py spec.json Main.dc.html",
+ "client": "<display name>",
+ "plan": "Manulife InvestReady III",
+ "date": "<YYYY-MM-DD = fund fetch day>",
+ "fund_file": "<data/funds_YYYY-MM-DD.json>",
+ "report": {
+  "date": "<report date>",
+  "start_date": "<first premium date>",
+  "paid_in": "<premiums paid S$>",
+  "dividends_paid_out": "<S$>",
+  "dividends_reinvested": "<S$>",
+  "rpq_cka_expiry": "<YYYY-MM-DD>",
+  "holdings": [
+   {
+    "code": "<code>",
+    "role": "<role>",
+    "value": "<S$>",
+    "cost": "<investment cost S$>",
+    "pnl": "<P&L S$ incl. dividends>",
+    "units": "<optional, enables the NAV date check>"
+   }
+  ]
+ },
+ "target": [
+  {
+   "code": "CABF",
+   "weight": 30,
+   "role": "Balanced core",
+   "holds_bonds": true
+  },
+  {
+   "code": "MGMD",
+   "weight": 15,
+   "role": "Income engine",
+   "holds_bonds": true
+  },
+  {
+   "code": "NSAD",
+   "weight": 25,
+   "role": "SG dividends",
+   "holds_bonds": false
+  },
+  {
+   "code": "ASGI",
+   "weight": 15,
+   "role": "Global income",
+   "holds_bonds": false
+  },
+  {
+   "code": "NAJD",
+   "weight": 15,
+   "role": "Japan dividends",
+   "holds_bonds": false
+  }
+ ],
+ "idea": "<headline, no figures>",
+ "tile_lead": "<e.g. Holding up well.>",
+ "tile_note": "<one sentence, no figures>",
+ "thesis": [
+  {
+   "lead": "<bold lead>",
+   "text": "<1-2 sentences; external figures only, each backed by its source>",
+   "sources": [
+    {
+     "name": "<source, e.g. FactSet Earnings Insight>",
+     "date": "<publication date YYYY-MM-DD, or YYYY-MM>",
+     "checked": "<YYYY-MM-DD you confirmed it's the latest release>"
+    }
+   ]
+  },
+  {
+   "lead": "<bold lead>",
+   "text": "<1-2 sentences; external figures only, each backed by its source>",
+   "sources": [
+    {
+     "name": "<source, e.g. FactSet Earnings Insight>",
+     "date": "<publication date YYYY-MM-DD, or YYYY-MM>",
+     "checked": "<YYYY-MM-DD you confirmed it's the latest release>"
+    }
+   ]
+  },
+  {
+   "lead": "<bold lead>",
+   "text": "<1-2 sentences; external figures only, each backed by its source>",
+   "sources": [
+    {
+     "name": "<source, e.g. FactSet Earnings Insight>",
+     "date": "<publication date YYYY-MM-DD, or YYYY-MM>",
+     "checked": "<YYYY-MM-DD you confirmed it's the latest release>"
+    }
+   ]
+  }
+ ]
+}
