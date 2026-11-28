@@ -15,3 +15,4 @@ is proven or fails. Dates are when a route was last verified.
 | PC sessions run unattended | Sessions started remotely stop at permission prompts (e.g. Glob) until approved on the PC | ⚠️ start them with `permission_mode: "auto"` and check status after starting | 26 Nov 2026 |
 | Google Sheets from a page | `mcp` capability, `Google Sheets` / `get_values` | ✅ (Desk, Production 2026) | 26 Nov 2026 |
 | Upload account skills | claude.ai Customize → Skills → + → Create skill → Upload; description ≤ 200 characters | ✅ | 26 Nov 2026 |
+| Run Python on the PC | Claude Code session on ChadMachine | ❌ no Python installed (only the Windows Store stub); processing runs in the cloud instead | 26 Nov 2026 |

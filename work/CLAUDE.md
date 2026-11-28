@@ -168,6 +168,9 @@ Manulife blocks cloud IPs, so the fetch runs on my PC (ChadMachine) in the
   the file to Drive Fund Data and set `status/fund` on the Desk.
   Start it with `permission_mode: "auto"`, then check its status a few
   minutes later: if it is waiting on a permission prompt, tell me at once.
+  The PC only fetches and uploads `raw_<date>.json` (it has no Python); the
+  cloud session then runs `fund_data.py`, uploads `funds_<NAV date>.json` and
+  sets the Desk status.
 - The fund list is the Model Portfolio focus list
   (https://claude.ai/artifact/4uLgYm6BzmuUCquYQVYHry) plus my extras, kept in
   `settings/funds` by ISIN. Re-checked on every Desk refresh, or when I ask.

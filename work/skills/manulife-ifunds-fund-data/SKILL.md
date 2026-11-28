@@ -30,21 +30,31 @@ fund or on a new day. The builds refuse a fund file from another day.
 
 ## Fetch (read-only, one agent drives the browser at a time)
 
+The work is split so the PC does only what needs its IP (the browser), and
+the processing runs where Python is (the cloud; the PC has no Python).
+
+**On the PC** (Claude Bridge session, Cowork, or any session with the
+built-in browser):
 1. Load the built-in-browser skill, then its tools in one ToolSearch call.
 2. Open a NEW tab on any fund page:
    `https://client.asia.manulifeam.com/discovery/en_SG/fund-details/<CODE>`
    (JS-rendered; the APIs below are same-origin from there). If a site-access
    prompt appears, request it and tell Nick to approve.
-3. Set `CODES` in `ifunds_fetch.js` and run it with the javascript tool. It
-   filters in JS and returns compact raw JSON (screener fields, about two years
+3. Set `CODES` in `ifunds_fetch.js` and run it with the javascript tool. For
+   funds known only by ISIN, first filter the screener in JS by ISIN to get
+   their codes. It returns compact raw JSON (screener fields, about two years
    of payouts, 3-month price series). Never dump the screener into context.
-4. Save it as `raw_<date>.json`, then run
-   `python3 fund_data.py raw_<date>.json` → `funds_<latest NAV date>.json`.
-5. Upload the `funds_…json` file to Drive `Work AI Files / Fund Data` (no
-   conversion) so cloud sessions can build from it.
+4. Upload the raw JSON as `raw_<YYYY-MM-DD>.json` (today, SGT) to Drive
+   `Work AI Files / Fund Data` (folder id 1R80Iqy60SBT15ue87QyzQUSwmYbxNprX),
+   text/plain content, no conversion. Report any ISIN not found on iFUNDS.
+   That's the PC's whole job.
+
+**In the cloud** (or anywhere with Python):
+5. Download `raw_<date>.json`, run `python3 fund_data.py raw_<date>.json` →
+   `funds_<latest NAV date>.json`, and upload that to the same Drive folder.
 6. Tell the Work Desk (https://claude.ai/artifact/HT749EePXdqUcRAwpUHU1p):
    with ArtifactData, set `status/fund` to
-   `{navDate: <latest NAV date>, fetchedOn: <today, SGT>, file: <file name>}`.
+   `{navDate: <latest NAV date>, fetchedOn: <fetch date, SGT>, file: <file name>}`.
    Its pitch tiles turn green for the rest of the day.
 7. If the browser can't be reached, say so and stop. Don't fall back to other
    sites.
