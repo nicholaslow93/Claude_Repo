@@ -116,6 +116,73 @@ A4 fit check before calling a page done.
 - Store client working inputs (premiums, fund picks) in Drive or on my PC,
   not in the repo.
 
+## Work design language: "Signal" (internal work pages only)
+
+Applies to work tools I use myself: the Desk, Hub, trackers. Client-facing
+one-pagers keep the navy/gold house style above.
+
+- Masthead: cobalt band `#1440a8` with a 22px white
+  grid at 7-8% opacity; eyebrow "Perpetual Accredited Investor Grind" in
+  gold `#ffd77a`, IBM Plex Mono caps; title in Space Grotesk 700.
+- Body: pale blue `#eef3fc` with the same 22px grid in blue at 7% opacity
+ ; white cards `#ffffff`, 1px `#d8e0ee` border, 12-14px radius.
+- Accent: blue `#1f56d6`, soft `#e1e9fb`; gold `#c99a2e`
+  for the next milestone; ok `#15795e`, bad `#b3401a`.
+- Type: Space Grotesk for headings and big numbers, IBM Plex Sans for text,
+  IBM Plex Mono for labels, dates and codes.
+- Key figures (commission, remuneration) sit in a bordered blue-soft box,
+  about 15% larger than the rest.
+- Buttons are pill-shaped, blue.
+- Body text 15.5px; captions and labels no smaller than 11.5px (mono caps)
+  or 13px (text), muted grey `#4e5973`, so text reads over the grid.
+- Light-only: the page stays light (pale blue grid, white cards) even when
+  the viewer is in dark mode.
+
+## Work Desk and its pages
+
+| Page | URL | What it holds |
+|---|---|---|
+| Work Desk | https://claude.ai/artifact/HT749EePXdqUcRAwpUHU1p | To-dos, clients in flight (initials only), task launchers, fund-data status, content links |
+| Production 2026 | https://claude.ai/artifact/DWWT2gAEAQAisfsxqv7WyG | Live read of the Pipes tab of "Pipes and Targets": to-date RC, commission, NAC, remuneration, distance to MDRT/COT/TOT |
+| Template Hub | https://claude.ai/artifact/2DRQQ6nb5hHaUqjzzbJB8X | Template launcher; `#<template-id>` in the link pre-picks one |
+
+Keep the Desk current from sessions (ArtifactData on the Work Desk URL):
+- After saving a fund file to Drive Fund Data, set `status/fund` to
+  `{navDate, fetchedOn (SGT date), file}`.
+- When I ask to add a to-do: `todos` collection, `{text, done: false, created}`.
+- When client work starts or changes stage: `clients` collection,
+  `{initials, work, stage, next, due, created}`. Initials only, never full names.
+- New weekly update or ad hoc note: `content` collection, `{title, url, date}`.
+- The fund codes to fetch live in `settings/funds` (`{codes: [...]}`). Change the
+  list there; the Desk and the fetch use it.
+
+### Fetching fund data on the PC
+
+Manulife blocks cloud IPs, so the fetch runs on my PC (ChadMachine) in the
+`Claude Bridge` folder, whose Claude app session has the built-in browser.
+- From a cloud session that I've approved for my trusted devices: call
+  `create_session` with the bridge environment whose name contains
+  "Claude Bridge" (`list_environments`, kind `bridge`), titled
+  `💻 WORK · Fund data fetch`, with a prompt to run the
+  manulife-ifunds-fund-data skill for the codes in `settings/funds`, upload
+  the file to Drive Fund Data and set `status/fund` on the Desk.
+  Start it with `permission_mode: "auto"`, then check its status a few
+  minutes later: if it is waiting on a permission prompt, tell me at once.
+  The PC only fetches and uploads `raw_<date>.json` (it has no Python); the
+  cloud session then runs `fund_data.py`, uploads `funds_<NAV date>.json` and
+  sets the Desk status.
+- The fund list is the Model Portfolio focus list
+  (https://claude.ai/artifact/4uLgYm6BzmuUCquYQVYHry) plus my extras, kept in
+  `settings/funds` by ISIN. Re-checked on every Desk refresh, or when I ask.
+- From the Desk: "Refresh fund data" sends one comment to Claude ("Refresh
+  fund data: sweep the focus list…"). The session watching the Desk then, in
+  one go: re-reads the focus list page and updates `settings/funds` if it
+  changed (keep `extras`), starts the PC fetch above for the full list,
+  replies in that thread with what changed and that the fetch started, checks
+  the PC session until it finishes, then resolves the thread. Nick presses
+  once; everything else is on Claude.
+- Fallback: "Copy prompt instead" on the Desk, pasted into Cowork on the PC.
+
 ## Out of scope for now
 
 Content marketing (LinkedIn / Instagram) and claims support. The original
